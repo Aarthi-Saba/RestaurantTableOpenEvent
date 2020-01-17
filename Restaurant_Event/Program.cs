@@ -19,7 +19,7 @@ namespace Restaurant_Event
             foreach ( Customer cust in CustomerQueue)
             {
                 tableobj.TableOpen += tableopenobj.TableOpenMessage;
-                tableobj.MealFinished();
+                tableobj.OpenTableforCust();
                 tableobj.TableOpen -= tableopenobj.TableOpenMessage;
                 cust.MealCourseChanged += mealchangedobj.NotifyCurrentMeal;
                 for(int i=0; i < Enum.GetNames(typeof(Customer.Meals)).Length;i++)

@@ -5,13 +5,12 @@ namespace Restaurant_Event
     class Table
     {
         public event Notify TableOpen;
-        public void MealFinished()
+        public void OpenTableforCust()
         {
             if(TableOpen != null)
             {
                 TableOpen(this, EventArgs.Empty);
             }
-            
         }
     }
     public delegate void Notify(object Table, EventArgs args);
@@ -22,6 +21,5 @@ namespace Restaurant_Event
         {
             Console.WriteLine("Table is Open !");
         }
-
     }
 }
